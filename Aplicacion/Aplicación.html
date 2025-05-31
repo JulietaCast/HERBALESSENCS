@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritual</title>
+  <link rel="stylesheet" href="CSS/ESTILOS.css">
+</head>
+ <a class="navbar-brand" href="https://julietacast.github.io/HERBALESSENCS/HERBAL.html">
+      <img src="IMAGENES/herbalessences.png" alt="Herbal Essences" class="logo-img">
+    </a>
+    
+<body>
+  <div class="main-container">
+    
+    <div id="video-container" class="video-container">
+      <video id="video" muted>
+        <source src="IMAGENES/prueba1.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+
+    
+    <div id="steps-container" class="steps-container">
+      <div class="step">
+        <h3>Paso 1</h3>
+        <p>Moja completamente tu cabello antes de aplicar el shampoo.</p>
+      </div>
+      <div class="step">
+        <h3>Paso 2</h3>
+        <p>Aplica una cantidad adecuada de shampoo en tus manos.</p>
+      </div>
+      <div class="step">
+        <h3>Paso 3</h3>
+        <p>Masajea suavemente tu cuero cabelludo con movimientos circulares.</p>
+      </div>
+      <div class="step">
+        <h3>Paso 4</h3>
+        <p>Enjuaga con abundante agua hasta eliminar los restos.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+    const video = document.getElementById("video");
+    const videoContainer = document.getElementById("video-container");
+    const stepsContainer = document.getElementById("steps-container");
+
+    let isMoved = false;
+
+    video.addEventListener("click", () => {
+      if (isMoved) {
+        
+        videoContainer.classList.remove("move-left");
+        stepsContainer.classList.remove("move-right");
+        video.pause(); 
+      } else {
+        
+        videoContainer.classList.add("move-left");
+        stepsContainer.classList.add("move-right");
+        video.play(); 
+      }
+      isMoved = !isMoved;
+    });
+  </script>
+</body>
+</html>

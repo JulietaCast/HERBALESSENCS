@@ -1,0 +1,236 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 10px; 
+}
+
+.carousel-images {
+  display: flex;
+  gap: -100px; 
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item {
+  position: relative;
+  width: 165px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item.active {
+  transform: scale(1.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transform-origin: bottom; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item img.clicked {
+  transform: rotateY(15deg) scale(1.2); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(1, 44, 8, 0.089);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.left-arrow {
+  left: -60px;
+}
+
+.arrow.right-arrow {
+  right: -60px;
+}
+
+
+.carousel-info {
+  font-family: "Lora", serif;
+  color: rgb(236, 236, 236);
+  font-weight: 0;
+  text-align: center;
+  position: relative;
+  position: relative; 
+  z-index: 2;
+  top: 50px; 
+}
+
+.carousel-info h3 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.carousel-info p {
+  font-family: "Lato", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 1.4; 
+}
+
+.carousel-info ul {
+  list-style-type: disc; 
+  padding-left: 10px; 
+  margin: 10;
+}
+
+.carousel-info ul li {
+   margin-bottom: 0px; 
+  line-height: 1.5;
+  margin-bottom: 10px; 
+  color: #ffffff; 
+}
+
+
+.navbar-brand {
+    position: absolute;
+    left: 0;
+    top: 0%;
+    transform: translateY(0%);
+    margin-left: -10px;
+     z-index: 1;
+}
+
+
+.logo-img {
+    max-height: 70px;
+    height: auto;
+     margin-left: -10px;
+      z-index: 1;
+}
+
+
+
+
+.apply-button-container {
+  position: fixed; 
+  bottom: 50px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 1000; 
+}
+
+
+.apply-button {
+  background-color: #ffffff54; 
+  color: #032c0fd5; 
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  border: none; 
+  border-radius: 30px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.apply-button:hover {
+  background-color: #ffffff; 
+  transform: scale(1.05); 
+}
+
+
+
+
+
+
+.background {
+  background-image: url('../IMAGENES/fondx.jpg');
+  background-color: #00000000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.background::before,
+.background::after {
+  content: ""; 
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+.background::before {
+  top: 0; 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.048), rgba(49, 49, 49, 0)); 
+}
+
+.background::after {
+  bottom: 0; 
+  background: linear-gradient(to top, rgba(20, 20, 20, 0.671), rgba(0, 0, 0, 0)); 
+}
+
+
+.background {
+  position: relative; 
+  overflow: hidden; 
+}
+
+
+.horizontal-bullets {
+  display: flex;
+  justify-content: space-between; 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.horizontal-bullets li {
+  margin: 0 10px; 
+  font-family: "Lato", sans-serif;
+  font-size: 1rem; 
+  color: #333; 
+}

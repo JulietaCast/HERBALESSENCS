@@ -1,0 +1,101 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("../IMAGENES/fondo.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.video-container {
+  position: relative;
+  z-index: 6;
+  transition: transform 0.8s ease;
+}
+
+.video-container.move-left {
+  transform: translateX(-4%); 
+}
+
+.video-container video {
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+
+.steps-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.steps-container.move-right {
+  transform: translate(30%, -50%); 
+  opacity: 1;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.521);
+  color: #00200e;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px; /* Tamaño fijo */
+}
+
+.step h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #024e28;
+}
+
+.step p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+
+
+.navbar-brand {
+    position: absolute;
+    left: 0;
+    top: 0%;
+    transform: translateY(0%);
+    margin-left: -10px;
+     z-index: 1;
+}
+
+
+.logo-img {
+    max-height: 70px;
+    height: auto;
+     margin-left: -10px;
+      z-index: 1;
+}
