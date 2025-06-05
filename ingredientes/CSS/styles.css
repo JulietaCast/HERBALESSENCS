@@ -171,24 +171,32 @@ body {
 
 
 .apply-button {
-  background-color: #ffffff54; 
-  color: #032c0fd5; 
+  position: fixed; /* Fija el botón en la ventana */
+  bottom: 80px; /* Espaciado desde la parte inferior */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Mantiene el botón centrado */
+  background-color: #ffffffb0; /* Color inicial */
+  color: #0a5e07; /* Color inicial del texto */
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
   padding: 10px 30px;
-  border: none; 
-  border-radius: 30px; 
+  border: none;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; 
+  text-decoration: none; /* Elimina el subrayado */
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.apply-button:active {
+  background-color: white; /* Cambia a blanco al presionar */
+  color: #0a5e07; /* Cambia el texto a negro */
 }
 
 
-.apply-button:hover {
-  background-color: #ffffff; 
-  transform: scale(1.05); 
-}
+
 
 
 
